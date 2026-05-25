@@ -1,6 +1,9 @@
 ﻿let usuarios = [];
 
-function registrarUsuario(){
+// Recibe el event del formulario
+function registrarUsuario(event){
+
+    event.preventDefault(); // Evita que el formulario se envíe por defecto
 
     let nombre = document.getElementById("nombre").value;
     let correo = document.getElementById("correo").value;
@@ -16,7 +19,7 @@ function registrarUsuario(){
     // Validar formato de correo
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(!emailPattern.test(correo)){
-        alert("Ingrese un correo válido");
+        alert("Ingresa un correo válido");
         return;
     }
 
@@ -32,12 +35,10 @@ function registrarUsuario(){
         password,
         rol
     };
-
     usuarios.push(usuario);
-
     console.log(usuarios);
 
-    alert("Usuario registrado correctamente");
+    alert("Usuario registrado correctamente. Ahora puedes iniciar sesión.");
 
     // Limpiar campos
     document.getElementById("nombre").value = "";
@@ -45,9 +46,12 @@ function registrarUsuario(){
     document.getElementById("password").value = "";
     if(document.getElementById("confirmPassword")) document.getElementById("confirmPassword").value = "";
     document.getElementById("rol").value = "";
+
+    showLogin(); // Mostrar el formulario de login después de registrar
 }
 
-function iniciarSesion(){
+function iniciarSesion(event){
+    event.preventDefault(); // Evita que el formulario se envíe por defecto
 
     let correo = document.getElementById("loginCorreo").value;
     let password = document.getElementById("loginPassword").value;
@@ -70,25 +74,17 @@ function iniciarSesion(){
 }
 
 function showLogin(){
-    const login = document.getElementById('loginForm');
-    const register = document.getElementById('registerForm');
-    if(login) login.style.display = 'block';
-    if(register) register.style.display = 'none';
-    const b1 = document.getElementById('btnLogin');
-    const b2 = document.getElementById('btnRegister');
-    if(b1) b1.classList.add('active');
-    if(b2) b2.classList.remove('active');
+    document.getElementById('loginForm').classList.remove('hidden');
+    document.getElementById('registerForm').classList.add('hidden');
+    document.getElementById('btnLogin').classList.add('active');
+    document.getElementById('btnRegister').classList.remove('active');
 }
 
 function showRegister(){
-    const login = document.getElementById('loginForm');
-    const register = document.getElementById('registerForm');
-    if(login) login.style.display = 'none';
-    if(register) register.style.display = 'block';
-    const b1 = document.getElementById('btnLogin');
-    const b2 = document.getElementById('btnRegister');
-    if(b1) b1.classList.remove('active');
-    if(b2) b2.classList.add('active');
+    document.getElementById('loginForm').classList.add('hidden');
+    document.getElementById('registerForm').classList.remove('hidden');
+    document.getElementById('btnLogin').classList.remove('active');
+    document.getElementById('btnRegister').classList.add('active');
 }
 
 if(document.readyState === 'loading'){
