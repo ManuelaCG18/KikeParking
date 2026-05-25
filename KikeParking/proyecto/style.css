@@ -7,6 +7,7 @@
     --color-texto-secundario: #595959;
     --color-fondo-boton: #EBEBEB;
     --radio-bordes: 20px;
+    --radio-bordes-boton: 10px;
 }
 
 
@@ -78,6 +79,44 @@ input:focus, select:focus{
     border-color: var(--color-primario);
 }
 
+/*4. Botones*/
+.btn-primario{
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: var(--radio-bordes-boton);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+switch{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+switch button{
+    flex: 1;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-bordes-boton);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.switch button.active{
+    background-color: var(--color-primario);
+    color: white;
+    border-color: var(--color-primario);
+}
+
+.hidden{
+    display: none;
+}
 
 /* Estilos creados por jj 
 body{
