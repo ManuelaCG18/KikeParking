@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Parqueadero App</h1>
+
+        <div class="switch">
+            <button id="btnLogin" onclick="showLogin()">Iniciar Sesión</button>
+            <button id="btnRegister" onclick="showRegister()">Registrarse</button>
+        </div>
+
+        <!-- LOGIN -->
+        <div id="loginForm" class="formulario">
+            <h2>Iniciar Sesión</h2>
+
+            <input type="email" id="loginCorreo" placeholder="Correo">
+            <input type="password" id="loginPassword" placeholder="Contraseña">
+
+            <button onclick="iniciarSesion()">Ingresar</button>
+        </div>
+
+        <!-- REGISTRO -->
+        <div id="registerForm" class="formulario">
+            <h2>Registro</h2>
+
+            <input type="text" id="nombre" placeholder="Nombre completo">
+
+            <input type="email" id="correo" placeholder="Correo">
+
+            <input type="password" id="password" placeholder="Contraseña">
+
+            <input type="password" id="confirmPassword" placeholder="Confirmar contraseña">
+
+            <select id="rol">
+                <option value="">Seleccione un rol</option>
+                <option value="conductor">Conductor</option>
+                <option value="propietario">Propietario de Parqueadero</option>
+            </select>
+
+            <button onclick="registrarUsuario()">Registrarse</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

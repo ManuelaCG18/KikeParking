@@ -1,0 +1,50 @@
+body{
+    font-family: Arial;
+    background-color: #f4f4f4;
+}
+
+.container{
+    width: 400px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.formulario{
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+input, select{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.switch{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.switch button{
+    width: auto;
+    padding: 8px 14px;
+}
+
+.switch button.active{
+    background-color: #333;
+    color: white;
+}
