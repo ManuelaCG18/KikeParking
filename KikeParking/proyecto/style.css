@@ -1,3 +1,60 @@
+/*1. Variables*/
+:root{
+    --color-primario: #ee2400;
+    --color-fondo: #ffffff;
+    --color-texto: #000000;
+    --color-borde: #d0d0d0;
+    --color-texto-secundario: #595959;
+    --color-fondo-boton: #EBEBEB;
+    --radio-bordes: 20px;
+}
+
+
+/*2. Estilos generales*/
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.titulo-app {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.formulario{
+    background: white;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    border-radius: var(--radio-bordes);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.formulario h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+/* Estilos creados por jj 
 body{
     font-family: Arial;
     background-color: #f4f4f4;
@@ -48,3 +105,5 @@ button{
     background-color: #333;
     color: white;
 }
+
+*/
