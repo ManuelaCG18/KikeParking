@@ -2,12 +2,13 @@
 :root{
     --color-primario: #ee2400;
     --color-fondo: #ffffff;
-    --color-texto: #000000;
+    --color-texto: #111827;
     --color-borde: #d0d0d0;
     --color-texto-secundario: #595959;
     --color-fondo-boton: #EBEBEB;
     --radio-bordes: 20px;
     --radio-bordes-boton: 10px;
+    --fuente-principal: 'Inter', sans-serif;
 }
 
 
