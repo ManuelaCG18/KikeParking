@@ -14,7 +14,7 @@
 
 /*2. Estilos generales*/
 body{
-    font-family: 'Inter', sans-serif;
+    font-family: var(--fuente-principal);
     background-color: var(--color-fondo);
     color: var(--color-texto);
     margin: 0;
@@ -40,10 +40,9 @@ body{
 
 .formulario{
     background: white;
-    padding: 30px 20px;
-    margin-bottom: 20px;
-    border-radius: var(--radio-bordes);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 20px 10px;
+    border-radius: none;
+    box-shadow: none
 }
 
 .formulario h2 {
@@ -68,12 +67,13 @@ body{
 }
 
 input, select{
-    padding: 12px;
+    padding: 14px 16px;
     border: 1px solid var(--color-borde);
     border-radius: var(--radio-bordes);
     font-size: 14px;
     outline: none;
     transition: border 0.3s ease;
+    background-color: var(--color-fondo);
 }
 
 input:focus, select:focus{
@@ -83,36 +83,43 @@ input:focus, select:focus{
 /*4. Botones*/
 .btn-primario{
     width: 100%;
-    padding: 14px;
-    margin-top: 10px;
+    padding: 15px;
+    margin-top: 20px;
     background-color: var(--color-primario);
     color: white;
     border: none;
     border-radius: var(--radio-bordes-boton);
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 switch{
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding: 0 10px;
 }
 
 switch button{
     flex: 1;
-    padding: 10px;
-    background-color: transparent;
-    border: 1px solid var(--color-borde);
+    padding: 12px;
+    background-color: #f3f4f6;
+    color: var(--color-texto-secundario);
+    border: none;
     border-radius: var(--radio-bordes-boton);
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 500;
+    font-family: var(--fuente-principal);
+    transition: all 0.3s ease;
 }
 
 .switch button.active{
     background-color: var(--color-primario);
     color: white;
     border-color: var(--color-primario);
+    font-weight: 600;
 }
 
 .hidden{
