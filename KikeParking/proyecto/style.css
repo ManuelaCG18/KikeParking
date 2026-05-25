@@ -79,6 +79,13 @@ body{
     padding: 0 15px;
 }
 
+.enlace-inferior {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
 .enlace-inferior a {
     color: var(--color-texto);
     text-decoration: underline;
@@ -86,7 +93,6 @@ body{
     font-weight: 600;
     cursor: pointer;
     transition: color 0.3s ease;
-    text-align: center;
 }
 
 .enlace-inferior a:hover {
