@@ -3,81 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login y Registro</title>
+    <title>Kike Parking</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="logo-container">
-    <img src="assets/logo.png" alt="Logo Kike Parking" class="logo">
-</div>
+    <div class="container">
 
-<div id="loginForm" class="formulario">
-    <h2>Inicia sesión o regístrate</h2>
-
-    <form onsubmit="iniciarSesion(event)">
-        <div class="grupo-input">
-            <label for="loginCorreo" class="hidden-label">Correo electrónico</label>
-            <input type="email" id="loginCorreo" placeholder="Correo electrónico" required>
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="Logo Kike Parking" class="logo">
         </div>
 
-        <div class="grupo-input">
-            <label for="loginPassword" class="hidden-label">Contraseña</label>
-            <input type="password" id="loginPassword" placeholder="Contraseña" required>
+        <div id="loginForm" class="formulario">
+            <h2>Inicia sesión o regístrate</h2>
+
+            <form onsubmit="iniciarSesion(event)">
+                <div class="grupo-input">
+                    <label for="loginCorreo" class="hidden-label">Correo electrónico</label>
+                    <input type="email" id="loginCorreo" placeholder="Número de teléfono o correo electrónico" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="loginPassword" class="hidden-label">Contraseña</label>
+                    <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                </div>
+
+                <button type="submit" class="btn-primario">Continuar</button>
+            </form>
+
+            <div class="separador">
+                <span>o</span>
+            </div>
+            <div class="enlace-inferior">
+                <a href="#" onclick="showRegister(); return false;">Registrarse con correo</a>
+            </div>
         </div>
 
-        <button type="submit" class="btn-primario">Continuar</button>
-    </form>
+        <div id="registerForm" class="formulario hidden">
+            <h2>Crea tu cuenta</h2>
 
-    <div class="separador">
-        <span>o</span>
-    </div>
-    <div class="enlace-inferior">
-        <a href="#" onclick="showRegister(); return false;">Registrarse con correo</a>
-    </div>
-</div>
+            <form onsubmit="registrarUsuario(event)">
+                <div class="grupo-input">
+                    <input type="text" id="nombre" placeholder="Nombre completo" required>
+                </div>
 
-<div id="registerForm" class="formulario hidden">
-    <h2>Crea tu cuenta</h2>
+                <div class="grupo-input">
+                    <input type="email" id="correo" placeholder="Correo electrónico" required>
+                </div>
 
-    <form onsubmit="registrarUsuario(event)">
-        <div class="grupo-input">
-            <input type="text" id="nombre" placeholder="Nombre completo" required>
+                <div class="grupo-input">
+                    <input type="password" id="password" placeholder="Crea una contraseña" required>
+                </div>
+
+                <div class="grupo-input">
+                    <input type="password" id="confirmPassword" placeholder="Repite la contraseña" required>
+                </div>
+
+                <div class="grupo-input">
+                    <select id="rol" required>
+                        <option value="">¿Cómo usarás la app?</option>
+                        <option value="conductor">Conductor</option>
+                        <option value="propietario">Propietario de Parqueadero</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primario">Registrarse</button>
+            </form>
+
+            <div class="separador">
+                <span>o</span>
+            </div>
+            <div class="enlace-inferior">
+                <a href="#" onclick="showLogin(); return false;">Ya tengo cuenta, iniciar sesión</a>
+            </div>
         </div>
 
-        <div class="grupo-input">
-            <input type="email" id="correo" placeholder="Correo electrónico" required>
-        </div>
-
-        <div class="grupo-input">
-            <input type="password" id="password" placeholder="Crea una contraseña" required>
-        </div>
-
-        <div class="grupo-input">
-            <input type="password" id="confirmPassword" placeholder="Repite la contraseña" required>
-        </div>
-
-        <div class="grupo-input">
-            <select id="rol" required>
-                <option value="">¿Cómo usarás la app?</option>
-                <option value="conductor">Quiero parquear mi vehículo</option>
-                <option value="propietario">Tengo un espacio para parquear</option>
-            </select>
-        </div>
-
-        <button type="submit" class="btn-primario">Registrarse</button>
-    </form>
-
-    <div class="separador">
-        <span>o</span>
-    </div>
-    <div class="enlace-inferior">
-        <a href="#" onclick="showLogin(); return false;">Ya tengo cuenta, iniciar sesión</a>
-    </div>
-</div>
-
-
-    <script src="script.js"></script>
+    </div> <script src="script.js"></script>
 </body>
 </html>

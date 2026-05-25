@@ -1,5 +1,5 @@
 /*1. Variables*/
-:root{
+:root {
     --color-primario: #ee2400;
     --color-fondo: #ffffff;
     --color-texto: #111827;
@@ -11,9 +11,8 @@
     --fuente-principal: 'Inter', sans-serif;
 }
 
-
 /*2. Estilos generales*/
-body{
+body {
     font-family: var(--fuente-principal);
     background-color: var(--color-fondo);
     color: var(--color-texto);
@@ -26,7 +25,7 @@ body{
     align-items: center;
 }
 
-.container{
+.container {
     width: 100%;
     max-width: 400px;
     padding: 20px;
@@ -35,7 +34,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .titulo-app {
@@ -43,17 +41,19 @@ body{
     margin-bottom: 30px;
 }
 
-.formulario{
-    background: white;
-    padding: 20px 10px;
-    border-radius: none;
-    box-shadow: none
+.formulario {
+    background: transparent;
+    padding: 20px 0;
+    border-radius: 0; 
+    box-shadow: none; 
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .formulario h2 {
     margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 20px;
+    margin-bottom: 25px;
+    font-size: 22px;
     text-align: center;
 }
 
@@ -70,6 +70,7 @@ body{
     color: var(--color-texto-secundario);
     font-size: 12px;
     font-weight: 500;
+    width: 100%;
 }
 
 .separador::before,
@@ -103,22 +104,22 @@ body{
     color: var(--color-primario);
 }
 
-
 /*3. Inputs y formularios*/
-
-.grupo-input{
+.grupo-input {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+    width: 100%;
 }
 
-.grupo-input label{
+.grupo-input label {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 6px;
 }
 
-input, select{
+input, select {
+    width: 100%; /* Evita que los inputs sean más pequeños que la pantalla */
     padding: 14px 16px;
     border: 1px solid var(--color-borde);
     border-radius: var(--radio-bordes);
@@ -126,14 +127,15 @@ input, select{
     outline: none;
     transition: border 0.3s ease;
     background-color: var(--color-fondo);
+    box-sizing: border-box; /* Evita que el padding deforme el input */
 }
 
-input:focus, select:focus{
+input:focus, select:focus {
     border-color: var(--color-primario);
 }
 
 /*4. Botones*/
-.btn-primario{
+.btn-primario {
     width: 100%;
     padding: 15px;
     margin-top: 20px;
@@ -147,24 +149,23 @@ input:focus, select:focus{
     transition: background-color 0.3s ease;
 }
 
-
-.hidden{
-    display: none;
+.hidden {
+    display: none !important; 
 }
 
 /*5. Logo */
-
 .logo-container {
    display: flex;
    justify-content: center;
-    margin-bottom: 20px;
-    width: 100%;
+   margin-bottom: 30px;
+   width: 100%;
 }
 
 .logo {
     max-width: 120px;
     height: auto;
 }
+
 
 /* Estilos creados por jj 
 body{
