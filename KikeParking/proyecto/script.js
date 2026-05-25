@@ -76,15 +76,11 @@ function iniciarSesion(event){
 function showLogin(){
     document.getElementById('loginForm').classList.remove('hidden');
     document.getElementById('registerForm').classList.add('hidden');
-    document.getElementById('btnLogin').classList.add('active');
-    document.getElementById('btnRegister').classList.remove('active');
 }
 
 function showRegister(){
     document.getElementById('loginForm').classList.add('hidden');
     document.getElementById('registerForm').classList.remove('hidden');
-    document.getElementById('btnLogin').classList.remove('active');
-    document.getElementById('btnRegister').classList.add('active');
 }
 
 if(document.readyState === 'loading'){
